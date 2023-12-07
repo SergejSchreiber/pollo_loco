@@ -1,0 +1,298 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('img/desert.png');
+    background-position: center;
+    background-size: cover;
+    font-family: 'Joti One', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    scale: 2;
+    color: rgb(119, 15, 15);
+    margin-bottom: 100px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 5px rgba(50, 50, 50, 0.8);
+    position: relative;
+    bottom: 210px;
+}
+
+@media (max-height: 900px) {
+    h1 {
+        bottom: 250px;
+    }
+}
+
+@media (max-height: 810px) {
+    h1 {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    h1 {
+        scale: 1;
+    }
+}
+
+canvas {
+    background-color: black;
+    display: block;
+    position: absolute;
+    box-shadow: 5px 5px 25px rgba(50, 50, 50, 0.8);
+}
+
+@media only screen and (max-width: 720px) {
+    canvas {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    canvas {
+        height: 100vh;
+    }
+}
+
+.intro-outro-screens {
+    position: absolute;
+    width: 720px;
+    height: 480px;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+@media (max-height: 480px) {
+    .intro-outro-screens {
+        height: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .intro-outro-screens {
+        width: 100%;
+    }
+}
+
+.rotate-mobile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 200;
+}
+
+@media (height > width) {
+    .rotate-mobile {
+        display: block;
+    }
+}
+
+.rotate-mobile img {
+    height: 250px;
+}
+
+#start-screen {
+    background-image: url('img/9_intro_outro_screens/start/startscreen_1.png');
+}
+
+#gameover-screen {
+    background-image: url('img/9_intro_outro_screens/game_over/gameover!.png');
+}
+
+#win-screen {
+    background-image: url('img/9_intro_outro_screens/game_over/gameover!.png');
+}
+
+button {
+    background-color: rgba(255, 136, 0, 0.9);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Joti One', Arial, Helvetica, sans-serif;
+    outline: transparent;
+    padding: 10px 25px;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: relative;
+}
+
+img {
+    user-select: none;
+}
+
+@media (max-width: 500px) {
+    button {
+        scale: 0.6;
+    }
+}
+
+button:hover {
+    filter: opacity(0.5);
+}
+
+.sound-size {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    z-index: 10;
+    gap: 15px;
+}
+
+.sound-size img {
+    height: 25px;
+    cursor: pointer;
+}
+
+.sound-size img:hover {
+    filter: opacity(0.6);
+}
+
+.controls{
+    position: relative;
+    top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.controls img{
+    height: 20px;
+}
+
+@media (max-height: 900px) {
+    .controls{
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .controls{
+        display: none;
+    }
+}
+
+table {
+    background-color: rgba(255, 136, 0, 0.9);
+    box-shadow: 5px 5px 25px rgba(50, 50, 50, 0.8);
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+td {
+    padding: 10px 15px;
+    font-size: 18px;
+    gap: 25px;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 650px;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media (max-height: 350px) {
+    #hud {
+        width: 100%;
+    }
+}
+
+@media (max-width: 660px) {
+    #hud {
+        width: 100%;
+    }
+}
+
+.panel {
+    display: flex;
+}
+
+.panel img {
+    height: 25px;
+}
+
+.panel span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 136, 0, 0.5);
+    cursor: pointer;
+    outline: transparent;
+    padding: 0px 10px;
+    margin: 0 10px 15px 10px;
+    border: 2px solid black;
+    font-size: 30px;
+    user-select: none;
+}
+
+#btnJump {
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+#btnThrow {
+    padding: 0 20px;
+}
+
+
+.d-none {
+    display: none !important;
+}
+
+.fullscreen {
+    width: 100% !important;
+    max-width: 2160px;
+    height: 100% !important;
+    height: 1440px;
+    }
+
+  /* joti-one-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Joti One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/joti-one-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
